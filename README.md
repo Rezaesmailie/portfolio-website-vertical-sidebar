@@ -40,6 +40,6 @@ This is a simple project that demonstrates how to insert an image in the README 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/project.git
+   git clone https://githسub.com/Rezaesmailie/portfolio-website-vertical-sidebar.git
 
 
