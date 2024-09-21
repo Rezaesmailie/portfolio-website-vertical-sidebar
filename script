@@ -1,0 +1,23 @@
+// Menu items
+const menuItems = document.querySelectorAll('.list-group-item');
+
+// Highlight active menu item based on h1 in each section
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    // Get the current section based on h1 tags
+    document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60) {
+            current = section.querySelector('h1').textContent;
+        }
+    });
+
+    // Highlight the corresponding menu item
+    menuItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.textContent.trim() === current.trim()) {
+            item.classList.add('active');
+        }
+    });
+});

@@ -1,0 +1,152 @@
+/* Background and general settings */
+body {
+    background: url('back.webp') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    color: white;
+}
+
+/* Custom scrollbar */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+/* Fixed sidebar */
+.fixed-sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Sidebar general styles */
+#sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-heading {
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.list-group-item {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#page-content-wrapper {
+    flex: 1;
+    margin-left: 200px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+#page-content-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+#page-content-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+/* Hide text on mobile */
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+        width: 80px;
+	height: auto;
+
+    }
+    .menu-label {
+        display: none;
+    }
+    .floating-image {
+        max-width: 200px; /* Responsive image scaling */
+    }
+}
+
+/* Section styles */
+.content-section {
+    padding: 80px 0;
+    min-height: 100vh;
+}
+
+/* Animation for the first image */
+.floating-image {
+    animation: floating 3s ease-in-out infinite;
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Rotating animation for the second image */
+.rotating-image {
+    animation: rotating 5s linear infinite;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scaling animation for the third image */
+.scaling-image {
+    animation: scaling 4s ease-in-out infinite;
+}
+
+@keyframes scaling {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Horizontal movement animation for the fourth image */
+.horizontal-moving-image {
+    animation: move-horizontal 4s ease-in-out infinite;
+}
+
+@keyframes move-horizontal {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+/* Active state for sidebar menu */
+.list-group-item.active {
+    background-color: #003366; /* Dark blue */
+    color: black; /* Text color for highlighted section */
+}
