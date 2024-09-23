@@ -1,6 +1,6 @@
 # portfolio-website-vertical-sidebar
 portfolio website vertical sidebar
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Reza+Esmail+Gol+Coder)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Reza+Esmail+Gol+portfolio+website+vertical+sidebar)](https://git.io/typing-svg)
 # My Project | پروژه من
 
 This is a simple project that demonstrates how to insert an image in the README file and includes features of the project.  
